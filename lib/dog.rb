@@ -1,4 +1,3 @@
-
 class Dog
   @@all = []
 
@@ -6,7 +5,7 @@ class Dog
 
   def initialize(name)
     @name = name
-    @@all << name
+    @@all << self
   end
   
   def self.all
@@ -14,6 +13,6 @@ class Dog
   end
 
   def self.print_all
-    @@all.map { |dog| puts dog}
+    @@all.map { |dog| puts dog.name}
   end
 end
